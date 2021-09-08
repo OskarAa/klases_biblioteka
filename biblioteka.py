@@ -1,3 +1,4 @@
+Klases nosaukums
 class Robots:
 """Klase reprezentē robotu ar specifisku vārdu."""
 # Klases konstruktors. Ar šo metodi tiek inicializēts objekts.
@@ -28,3 +29,43 @@ print("\nRoboti šeit var paveikt kādu darbu..\n")
 print("Roboti visu ir izdarījuši. Mēs viņus varam iznīcināt.")
 droid1.iznicinat()
 droid2.iznicinat()
+
+versija = 1
+saraksts = ['maize', 'olas', 'piens']
+def summa(a, b):
+return a + b
+class Auto:
+def braukt(self):
+print("Auto brauc!")
+
+import biblioteka
+print(biblioteka.versija)
+for prece in biblioteka.saraksts:
+print(prece)
+print(biblioteka.summa(2, 3))
+bmw = biblioteka.Auto()
+bmw.braukt()
+import biblioteka as bibl
+print(bibl.versija)
+for prece in bibl.saraksts:
+print(prece)
+print(bibl.summa(2, 3))
+bmw = bibl.Auto()
+bmw.braukt()
+
+from biblioteka import *
+print(versija)
+for prece in saraksts:
+print(prece)
+print(summa(2, 3))
+bmw = Auto()
+bmw.braukt()
+from biblioteka import versija, summa
+print(versija)
+# Saraksts nav pievienots, tādēļ cikls nestrādās.
+# for prece in saraksts:
+# print(prece)
+print(summa(2, 3))
+# Klase Auto nav pievienota, tādēļ nevar izveidot objektu.
+# bmw = Auto()
+# bmw.braukt()
